@@ -4,40 +4,29 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/* 1. Užtikrinam pilną aukštį */
-html {
-  overflow-x: hidden;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-body {
+html, body {
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   background-color: #0d0d0d;
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
 }
 
-/* 2. Header: mažesnis tarpas viršuje */
+/* Header */
 header {
   padding: 20px 20px 40px;
   text-align: center;
   background: linear-gradient(to bottom, #111, #1c1c1c);
 }
 
-/* 3. Visas turinys – išstumia footer */
-main {
-  flex: 1 0 auto;
-}
-
-/* 4. Titulinis */
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
@@ -53,9 +42,12 @@ p {
   color: #bbb;
 }
 
-/* 5. Kolekcijų blokas */
+/* Kolekcijų konteineris */
+main {
+  flex: 1 0 auto;
+}
+
 .collections {
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -64,26 +56,24 @@ p {
   margin: auto;
 }
 
+/* Kolekcijos kortelė */
 .collection {
-  width: 100%;
   background-color: #1a1a1a;
   border-radius: 20px;
   padding: 40px 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.15);
+  transition: box-shadow 0.3s ease;
 }
 
 .collection:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(200, 200, 200, 0.25);
-  
+  box-shadow: 0 8px 24px rgba(220, 220, 220, 0.25);
 }
 
 .collection img {
   display: block;
   width: 100%;
-  height: auto;
   max-width: 800px;
+  height: auto;
   border-radius: 12px;
   margin: 20px auto;
 }
@@ -93,14 +83,16 @@ p {
   font-size: 32px;
   margin-bottom: 10px;
   color: #00e1ff;
+  text-align: center;
 }
 
+.collection p {
+  text-align: center;
+}
+
+/* Mygtukas */
 .collection a {
   display: block;
-  width: 100%;
-  max-width: 250px;
-  box-sizing: border-box;
-  word-wrap: break-word;
   margin: 20px auto 0;
   padding: 12px 24px;
   background-color: #00e1ff;
@@ -110,21 +102,23 @@ p {
   border-radius: 8px;
   transition: background-color 0.3s ease;
   text-align: center;
+  max-width: 250px;
 }
 
 .collection a:hover {
   background-color: #00c3dd;
 }
 
-/* 6. Footer – visada matomas apačioj */
+/* Footer */
 footer {
   flex-shrink: 0;
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
   font-size: 14px;
   color: #777;
 }
 
+/* Papildoma reveal animacija (naudojama jei reikia JS scroll animacijoms) */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -137,16 +131,10 @@ footer {
   transform: translateY(0);
 }
 
-/* ========================== */
-/* ======= MOBILE CSS ======= */
-/* ========================== */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   h1 {
     font-size: 32px;
-  }
-
-  .collection:hover {
-    transform: none;
   }
 
   .collection h2 {
@@ -165,11 +153,6 @@ footer {
 
   .collection {
     padding: 30px 20px;
-  }
-
-  .collection img {
-    max-width: 100%;
-    height: auto;
   }
 
   .collection a {
