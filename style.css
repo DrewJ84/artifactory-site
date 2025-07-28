@@ -62,7 +62,7 @@ p {
 
 .collection:hover {
   transform: scale(1.02);
-  box-shadow: 0 8p1628px rgba(150, 150, 150, 0.2);
+  box-shadow: 0 8px 16px rgba(200, 200, 200, 0.25);
   
 }
 
