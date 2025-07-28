@@ -125,6 +125,18 @@ footer {
   color: #777;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ========================== */
 /* ======= MOBILE CSS ======= */
 /* ========================== */
