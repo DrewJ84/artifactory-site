@@ -1,21 +1,32 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
-body {
+/* 1. Užtikrinam pilną aukštį */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #0d0d0d;
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
+/* 2. Header: mažesnis tarpas viršuje */
 header {
-  padding: 40px 20px 40px;
+  padding: 20px 20px 40px;
   text-align: center;
   background: linear-gradient(to bottom, #111, #1c1c1c);
 }
 
+/* 3. Visas turinys – išstumia footer */
+main {
+  flex: 1;
+}
+
+/* 4. Titulinis */
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
@@ -31,6 +42,7 @@ p {
   color: #bbb;
 }
 
+/* 5. Kolekcijų blokas */
 .collections {
   display: flex;
   flex-direction: column;
@@ -82,6 +94,7 @@ p {
   background-color: #00c3dd;
 }
 
+/* 6. Footer – visada matomas apačioj */
 footer {
   text-align: center;
   padding: 20px 20px;
