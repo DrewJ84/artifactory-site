@@ -1,28 +1,21 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 html, body {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   background-color: #0d0d0d;
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  scroll-behavior: smooth;
 }
 
-/* Header */
 header {
-  padding: 20px 20px 40px;
+  padding: 20px;
   text-align: center;
   background: linear-gradient(to bottom, #111, #1c1c1c);
 }
@@ -42,7 +35,6 @@ p {
   color: #bbb;
 }
 
-/* Kolekcijų konteineris */
 main {
   flex: 1 0 auto;
 }
@@ -56,26 +48,23 @@ main {
   margin: auto;
 }
 
-/* Kolekcijos kortelė */
 .collection {
   background-color: #1a1a1a;
   border-radius: 20px;
   padding: 40px 20px;
-  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.15);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
-.collection:hover {
-  box-shadow: 0 8px 24px rgba(220, 220, 220, 0.25);
+.collection-inner {
+  text-align: center;
 }
 
 .collection img {
   display: block;
-  width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   border-radius: 12px;
-  margin: 20px auto;
+  margin: 0 auto 20px;
 }
 
 .collection h2 {
@@ -83,17 +72,11 @@ main {
   font-size: 32px;
   margin-bottom: 10px;
   color: #00e1ff;
-  text-align: center;
 }
 
-.collection p {
-  text-align: center;
-}
-
-/* Mygtukas */
 .collection a {
-  display: block;
-  margin: 20px auto 0;
+  display: inline-block;
+  margin-top: 20px;
   padding: 12px 24px;
   background-color: #00e1ff;
   color: #0d0d0d;
@@ -101,15 +84,12 @@ main {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  text-align: center;
-  max-width: 250px;
 }
 
 .collection a:hover {
   background-color: #00c3dd;
 }
 
-/* Footer */
 footer {
   flex-shrink: 0;
   text-align: center;
@@ -118,21 +98,8 @@ footer {
   color: #777;
 }
 
-/* Papildoma reveal animacija (naudojama jei reikia JS scroll animacijoms) */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  will-change: opacity, transform;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 768px) {
   h1 {
     font-size: 32px;
   }
@@ -152,12 +119,12 @@ footer {
   }
 
   .collection {
-    padding: 30px 20px;
+    padding: 30px 15px;
   }
 
   .collection a {
-    padding: 10px 20px;
     font-size: 14px;
+    padding: 10px 20px;
   }
 
   footer {
