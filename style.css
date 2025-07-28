@@ -4,6 +4,10 @@
 * {
   outline: 1px solid red;
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 /* 1. Užtikrinam pilną aukštį */
 html {
   overflow-x: hidden;
@@ -97,8 +101,9 @@ p {
 
 .collection a {
   display: block;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
   word-wrap: break-word;
   margin: 20px auto 0;
   padding: 12px 24px;
