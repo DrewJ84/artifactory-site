@@ -65,10 +65,11 @@ p {
 }
 
 .collection img {
+  display: block;
   width: 100%;
   max-width: 800px;
   border-radius: 12px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .collection h2 {
