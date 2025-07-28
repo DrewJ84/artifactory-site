@@ -80,8 +80,9 @@ p {
 }
 
 .collection a {
-  display: inline-block;
-  margin-top: 10px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
   padding: 12px 24px;
   background-color: #00e1ff;
   color: #0d0d0d;
@@ -89,6 +90,7 @@ p {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .collection a:hover {
