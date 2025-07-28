@@ -1,65 +1,90 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
+
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #0e0e0e;
-    color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
 header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #111;
-    border-bottom: 1px solid #222;
+  padding: 80px 20px 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, #111, #1c1c1c);
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #00f6ff;
+  letter-spacing: 1.5px;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #bbb;
 }
 
 .collections {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    gap: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .collection {
-    max-width: 700px;
-    text-align: center;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.collection:hover {
+  transform: translateY(-5px);
 }
 
 .collection img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #333;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
 .collection h2 {
-    margin: 20px 0 10px;
-}
-
-.collection p {
-    color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00e1ff;
 }
 
 .collection a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4fc3f7;
-    text-decoration: none;
-    border: 1px solid #4fc3f7;
-    padding: 6px 16px;
-    border-radius: 4px;
-    transition: background 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: #00e1ff;
+  color: #0d0d0d;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .collection a:hover {
-    background-color: #4fc3f7;
-    color: #000;
+  background-color: #00c3dd;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #222;
-    font-size: 0.9em;
-    color: #555;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #777;
 }
