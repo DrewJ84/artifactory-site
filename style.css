@@ -6,7 +6,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(50, 50, 50, 0.8));
+  background-color: #0d0d0d;
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -106,4 +106,46 @@ footer {
   padding: 20px 20px;
   font-size: 14px;
   color: #777;
+}
+
+/* ========================== */
+/* ======= MOBILE CSS ======= */
+/* ========================== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .collection h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .collections {
+    padding: 40px 10px;
+    gap: 40px;
+  }
+
+  .collection {
+    padding: 30px 20px;
+  }
+
+  .collection img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .collection a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
