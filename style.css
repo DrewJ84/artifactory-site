@@ -2,18 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
 /* 1. Užtikrinam pilną aukštį */
-html, body {
+html {
   overflow-x: hidden;
   height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background-color: #0d0d0d;
   color: #e0e0e0;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
 }
 
 /* 2. Header: mažesnis tarpas viršuje */
