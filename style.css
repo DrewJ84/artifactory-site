@@ -23,7 +23,7 @@ header {
 
 /* 3. Visas turinys – išstumia footer */
 main {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 /* 4. Titulinis */
@@ -96,6 +96,7 @@ p {
 
 /* 6. Footer – visada matomas apačioj */
 footer {
+  flex-shrink: 0;
   text-align: center;
   padding: 20px 20px;
   font-size: 14px;
