@@ -35,10 +35,11 @@ body {
 /* 2. Header: mažesnis tarpas viršuje */
 header {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px 20px 10px;
+  align-items: center;         /* Vertikalus centravimas */
+  justify-content: flex-start; /* Kairinis lygiavimas */
+  height: 120px;               /* Derinta su kolekcijos padding */
   background: linear-gradient(to bottom, #111, #1c1c1c);
+  padding: 0;  
 }
 
 /* 3. Visas turinys – išstumia footer */
