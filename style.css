@@ -45,6 +45,25 @@ main {
   flex: 1 0 auto;
 }
 
+.button-ghost {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.button-ghost:hover {
+  color: #ccc; /* Patamsėjusi teksto spalva */
+  border-width: 1.5px; /* Vos vos storesnis */
+  padding: 11.5px 23.5px; /* Vizualiai padidina – atsveria storesnį border'į */
+}
+
 /* 4. Titulinis */
 h1 {
   font-family: 'Orbitron', sans-serif;
