@@ -25,10 +25,13 @@ body {
   line-height: 1.6;
 }
 
+.header-left {
+  text-align: left;
+}
+
 /* 2. Header: mažesnis tarpas viršuje */
 header {
-  padding: 20px 20px 40px;
-  text-align: center;
+  padding: 20px 20px 20px;
   background: linear-gradient(to bottom, #111, #1c1c1c);
 }
 
