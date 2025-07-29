@@ -25,21 +25,19 @@ body {
   line-height: 1.6;
 }
 
-.header-left {
+.header-container {
+  display: flex;
+  align-items: center;               /* Vertikalus centravimas */
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 20px;
+  padding-left: 20px;               /* Atitinka .collection paddingą */
+  height: 120px;                    /* Arba 100–120px – galima koreguoti */
   box-sizing: border-box;
 }
 
 /* 2. Header: mažesnis tarpas viršuje */
 header {
-  display: block;
-  align-items: center;         /* Vertikalus centravimas */
-  justify-content: flex-start; /* Kairinis lygiavimas */
-  height: 120px;               /* Derinta su kolekcijos padding */
   background: linear-gradient(to bottom, #111, #1c1c1c);
-  padding: 60px 20px 0;  
 }
 
 /* 3. Visas turinys – išstumia footer */
@@ -51,8 +49,7 @@ main {
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
-  margin: 0; /* ← Šitas svarbiausias! */
-  padding: 0;
+  margin: 0;
   color: #00f6ff;
   letter-spacing: 1.5px;
 }
