@@ -45,10 +45,13 @@ main {
   flex: 1 0 auto;
 }
 
-.button-ghost {
+.button-center {
   display: flex;
   justify-content: center;
-  margin-top: 30px; /* šiek tiek žemiau nei tekstas */
+  margin-top: 40px; /* šiek tiek žemiau nei tekstas */
+}
+
+.button-ghost {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
