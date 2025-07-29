@@ -26,7 +26,10 @@ body {
 }
 
 .header-left {
-  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 /* 2. Header: mažesnis tarpas viršuje */
@@ -144,6 +147,11 @@ footer {
 /* ======= MOBILE CSS ======= */
 /* ========================== */
 @media (max-width: 600px) {
+  .header-left {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
   h1 {
     font-size: 32px;
   }
