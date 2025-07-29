@@ -122,7 +122,7 @@ p {
   color: #00e1ff;
 }
 
-.collection a {
+.collection a:not(.button-ghost) {
   display: block;
   width: 100%;
   max-width: 250px;
@@ -139,7 +139,7 @@ p {
   text-align: center;
 }
 
-.collection a:hover {
+.collection a:not(.button-ghost):hover {
   background-color: #00c3dd;
 }
 
