@@ -31,7 +31,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 20px;               /* Atitinka .collection paddingą */
-  height: 120px;                    /* Arba 100–120px – galima koreguoti */
+  height: 100px;                    /* Arba 100–120px – galima koreguoti */
   box-sizing: border-box;
 }
 
