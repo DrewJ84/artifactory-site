@@ -34,12 +34,12 @@ body {
 
 /* 2. Header: mažesnis tarpas viršuje */
 header {
-  display: flex;
+  display: block;
   align-items: center;         /* Vertikalus centravimas */
   justify-content: flex-start; /* Kairinis lygiavimas */
   height: 120px;               /* Derinta su kolekcijos padding */
   background: linear-gradient(to bottom, #111, #1c1c1c);
-  padding: 0;  
+  padding: 60px 20px 0;  
 }
 
 /* 3. Visas turinys – išstumia footer */
@@ -52,9 +52,9 @@ h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
   margin: 0; /* ← Šitas svarbiausias! */
+  padding: 0;
   color: #00f6ff;
   letter-spacing: 1.5px;
-  line-height: 1;
 }
 
 p {
