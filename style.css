@@ -1,127 +1,184 @@
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-body {
+/* 1. Užtikrinam pilną aukštį */
+html {
+  overflow-x: hidden;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background-color: #0d0d0d;
   color: #e0e0e0;
-  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
+/* 2. Header: mažesnis tarpas viršuje */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 40px;
-  background: transparent;
-  z-index: 999;
+  padding: 20px 20px 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, #111, #1c1c1c);
 }
 
-.logo {
+/* 3. Visas turinys – išstumia footer */
+main {
+  flex: 1 0 auto;
+}
+
+/* 4. Titulinis */
+h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 22px;
+  font-size: 48px;
+  margin-bottom: 10px;
   color: #00f6ff;
   letter-spacing: 1.5px;
 }
 
-main {
-  padding-top: 80px;
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #bbb;
 }
 
-.project {
-  height: 100vh;
+/* 5. Kolekcijų blokas */
+.collections {
+  overflow-x: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.project-image {
-  position: relative;
+.collection {
   width: 100%;
-  max-width: 1200px;
-  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.collection:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(200, 200, 200, 0.25);
+  
+}
+
+.collection img {
   display: block;
-  transition: transform 1.5s ease;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 12px;
+  margin: 20px auto;
 }
 
-.project-image:hover img {
-  transform: scale(1.05);
-}
-
-.overlay {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  opacity: 0;
-  animation: fadeInUp 1.6s ease forwards;
-  animation-delay: 0.4s;
-}
-
-.overlay h2 {
+.collection h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
+  margin-bottom: 10px;
   color: #00e1ff;
-  margin-bottom: 20px;
 }
 
-.overlay a {
-  display: inline-block;
-  padding: 14px 32px;
-  font-weight: 600;
-  text-decoration: none;
+.collection a {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin: 20px auto 0;
+  padding: 12px 24px;
   background-color: #00e1ff;
   color: #0d0d0d;
+  font-weight: bold;
+  text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-.overlay a:hover {
+.collection a:hover {
   background-color: #00c3dd;
 }
 
+/* 6. Footer – visada matomas apačioj */
 footer {
+  flex-shrink: 0;
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   font-size: 14px;
   color: #777;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, 60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  will-change: opacity, transform;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .overlay h2 {
-    font-size: 26px;
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================== */
+/* ======= MOBILE CSS ======= */
+/* ========================== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
   }
 
-  .overlay a {
-    padding: 12px 24px;
+  .collection:hover {
+    transform: none;
+  }
+
+  .collection h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .collections {
+    padding: 40px 10px;
+    gap: 40px;
+  }
+
+  .collection {
+    padding: 30px 20px;
+  }
+
+  .collection img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .collection a {
+    padding: 10px 20px;
     font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
   }
 }
