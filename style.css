@@ -12,6 +12,11 @@ html {
   padding: 0;
 }
 
+*[style*="transform"],
+*[style*="animation"] {
+  opacity: 0;
+}
+
 body {
   overflow-x: hidden;
   display: flex;
