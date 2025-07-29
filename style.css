@@ -54,14 +54,14 @@ main {
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  transition: all 0.3s ease;
   display: inline-block;
+  transition: color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
 .button-ghost:hover {
-  color: #ccc; /* Patamsėjusi teksto spalva */
-  border-width: 1.5px; /* Vos vos storesnis */
-  padding: 11.5px 23.5px; /* Vizualiai padidina – atsveria storesnį border'į */
+  color: #ccc; /* Patamsėjęs tekstas */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2); /* Švelnus išsiplėtimas */
+  border: 1.5px solid #fff; /* Vos storesnis */
 }
 
 /* 4. Titulinis */
