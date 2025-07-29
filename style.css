@@ -1,124 +1,106 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Setup */
 body, html {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
   background-color: #0d0d0d;
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* Header */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 30px;
-  z-index: 1000;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  pointer-events: none;
+  padding: 30px 40px;
+  z-index: 10;
 }
 
-header h1 {
-  font-size: 22px;
-  color: #00f6ff;
-  pointer-events: auto;
-}
-
-/* Section Container */
-section.project {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Fullscreen Image */
-.project img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  opacity: 1;
-  transition: transform 0.5s ease;
-}
-
-/* Overlay Content */
-.project .overlay {
-  position: absolute;
-  bottom: 60px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-.project .overlay h2 {
-  font-size: 36px;
-  font-weight: 800;
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  color: white;
-  margin-bottom: 20px;
+}
+
+/* Fullscreen Project Sections */
+.project {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 100px;
+  transition: all 0.5s ease;
+}
+
+.overlay {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.project:hover .overlay {
   opacity: 1;
-  transition: opacity 0.5s ease;
-  pointer-events: auto;
+  transform: translateY(0);
 }
 
-.project .overlay a {
-  display: inline-block;
+.overlay h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.btn {
   padding: 12px 28px;
-  border: 2px solid white;
-  border-radius: 999px;
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  pointer-events: auto;
-}
-
-.project .overlay a:hover {
-  background-color: white;
+  background-color: #00e1ff;
   color: #0d0d0d;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-/* Button Arrow */
-.project .overlay a::after {
-  content: ' ↗';
-  font-size: 14px;
+.btn:hover {
+  background-color: #00b8cc;
 }
 
-/* Responsive */
+.btn.disabled {
+  background-color: #444;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 18px;
-  }
-
-  .project .overlay h2 {
+  .overlay h2 {
     font-size: 28px;
   }
-
-  .project .overlay a {
-    font-size: 13px;
-    padding: 10px 24px;
+  .btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+  header {
+    padding: 20px;
+  }
+  .logo {
+    font-size: 18px;
   }
 }
