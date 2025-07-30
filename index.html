@@ -4,76 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artifactory</title>
-  <link rel="icon" href="/favicon.svg" type="image/x-icon" />
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Artifactory – Futuristic digital artifacts. Curated collections of neural, cosmic, and biomechanical NFTs.">
-  <meta name="keywords" content="NFT, Artifactory, Neural Implants, Etherstones, digital art, futuristic, cryptoart, OpenSea, collectibles">
-  <meta name="author" content="Artifactory Team">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Artifactory – Futuristic Digital Artifacts">
-  <meta property="og:description" content="Explore unique NFT collections: Etherstones & Neural Implants. Sci-fi digital collectibles forged beyond time.">
-  <meta property="og:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
-  <meta property="og:url" content="https://www.artifactory.lt/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Artifactory – Futuristic Digital Artifacts">
-  <meta name="twitter:description" content="Explore unique NFT collections like Etherstones and Neural Implants.">
-  <meta name="twitter:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
-
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <header>
-    <div class="header-container" data-aos="fade-down" data-aos-delay="0">
+  <!-- Fiksuotas pirmo projekto fonas -->
+  <div class="fixed-bg"></div>
+
+  <!-- Fiksuotas permatomas headeris -->
+  <header class="sticky-header">
+    <div class="header-container">
       <h1>Artifactory</h1>
     </div>
   </header>
 
   <main>
-    <section class="collections">
-      <div class="collection" data-aos="fade-up" data-aos-delay="150" >
-        <div class="image-wrapper">
-          <img src="assets/etherstones-cover.png" alt="The Etherstones" class="collection-image" />
-        </div>
-        <div class="collection-content">
+    <div class="scroll-content">
+      <!-- Pirmas blokas – Etherstones -->
+      <section class="hero-section">
+        <div class="section-content">
           <h2>The Etherstones</h2>
-          <p>112 mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
-          <div class="button-center">
-            <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="button-ghost">View on OpenSea</a>
-          </div>
+          <p>
+            112 mystical cosmic stones,<br>
+            each holding unique elemental energies.<br>
+            Originating from an ancient dimension beyond comprehension.
+          </p>
+          <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="section-btn">View Project</a>
         </div>
-      </div>
+      </section>
 
-      <div class="collection" data-aos="fade-up" data-aos-delay="150">
-        <div class="image-wrapper">
-          <img src="assets/implants-cover.png" alt="Neural Implants" class="collection-image" />
-        </div>
-        <div class="collection-content">
+      <!-- Sekantis blokas – Neural Implants -->
+      <section class="cover-section" style="background-image: url('assets/implants-cover.png');">
+        <div class="section-content">
           <h2>Neural Implants</h2>
-          <p>400 biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
-          <div class="button-center">
-            <a href="#" class="button-ghost">Coming Soon</a>
-          </div>
+          <p>
+            400 biomechanical micro-implants<br>
+            engineered for direct brain integration.<br>
+            Each one carries hidden power.<br>
+            Launching soon.
+          </p>
+          <a href="#" class="section-btn">Coming Soon</a>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Gali pridėti daugiau NFT kolekcijų tokiu pat principu -->
+    </div>
   </main>
 
   <footer>
-    <div data-aos="fade" data-aos-delay="200" data-aos-once="true" data-aos-offset="0">
-      <p>&copy; 2025 Artifactory</p>
-    </div>
+    <p>&copy; 2025 Artifactory</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
 </body>
 </html>
