@@ -2,41 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artifactory</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.svg" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Artifactory – Futuristic digital artifacts. Curated collections of neural, cosmic, and biomechanical NFTs.">
+  <meta name="keywords" content="NFT, Artifactory, Neural Implants, Etherstones, digital art, futuristic, cryptoart, OpenSea, collectibles">
+  <meta name="author" content="Artifactory Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Artifactory – Futuristic Digital Artifacts">
+  <meta property="og:description" content="Explore unique NFT collections: Etherstones & Neural Implants. Sci-fi digital collectibles forged beyond time.">
+  <meta property="og:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
+  <meta property="og:url" content="https://www.artifactory.lt/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artifactory – Futuristic Digital Artifacts">
+  <meta name="twitter:description" content="Explore unique NFT collections like Etherstones and Neural Implants.">
+  <meta name="twitter:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
+
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <span class="logo">Artifactory</span>
+  <header>
+    <div class="header-container" data-aos="fade-down" data-aos-delay="0">
+      <h1>Artifactory</h1>
     </div>
   </header>
-  <main class="snap-container">
-    <section class="slide-section" data-aos="fade-up" data-aos-duration="1000">
-      <div class="slide-content">
-        <img src="assets/etherstones-cover.png" alt="The Etherstones" class="slide-image" />
-        <h2 class="slide-title">The Etherstones</h2>
-        <p class="slide-desc">112 mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
-        <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="slide-btn">View on OpenSea</a>
+
+  <main>
+    <section class="collections">
+      <div class="collection" data-aos="fade-up" data-aos-delay="150" >
+        <div class="image-wrapper">
+          <img src="assets/etherstones-cover.png" alt="The Etherstones" class="collection-image" />
+        </div>
+        <div class="collection-content">
+          <h2>The Etherstones</h2>
+          <p>112 mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
+          <div class="button-center">
+            <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="button-ghost">View on OpenSea</a>
+          </div>
+        </div>
       </div>
-    </section>
-    <section class="slide-section" data-aos="fade-up" data-aos-duration="1000">
-      <div class="slide-content">
-        <img src="assets/implants-cover.png" alt="Neural Implants" class="slide-image" />
-        <h2 class="slide-title">Neural Implants</h2>
-        <p class="slide-desc">400 biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
-        <a href="#" class="slide-btn coming-soon">Coming Soon</a>
+
+      <div class="collection" data-aos="fade-up" data-aos-delay="150">
+        <div class="image-wrapper">
+          <img src="assets/implants-cover.png" alt="Neural Implants" class="collection-image" />
+        </div>
+        <div class="collection-content">
+          <h2>Neural Implants</h2>
+          <p>400 biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
+          <div class="button-center">
+            <a href="#" class="button-ghost">Coming Soon</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
   <footer>
-    <div class="footer-inner">
-      &copy; 2025 Artifactory
+    <div data-aos="fade" data-aos-delay="200" data-aos-once="true" data-aos-offset="0">
+      <p>&copy; 2025 Artifactory</p>
     </div>
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true });
