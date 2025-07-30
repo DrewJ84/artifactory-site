@@ -68,12 +68,20 @@ main {
 
 .image-wrapper {
   overflow: hidden;
+  position: relative;
+  /* Nauja: */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 340px; /* ar kokį nori paveikslėlio aukštį */
 }
 
 .collection-image {
   width: 100%;
-  display: block;
-  border-radius: 20px 20px 0 0;
+  height: 100%;
+  object-fit: cover;
+  /* Nauja: */
+  transform-origin: center center;
 }
 
 .scale-in {
