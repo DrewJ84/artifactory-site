@@ -37,9 +37,9 @@
 
   <main>
     <section class="collections">
-      <div class="collection">
+      <div class="collection" data-aos="fade-up" data-aos-delay="150" >
         <div class="image-wrapper">
-          <img src="assets/etherstones-cover.jpeg" alt="The Etherstones" class="collection-image scale-in" />
+          <img src="assets/etherstones-cover.png" alt="The Etherstones" class="collection-image" />
         </div>
         <div class="collection-content">
           <h2>The Etherstones</h2>
@@ -50,9 +50,9 @@
         </div>
       </div>
 
-      <div class="collection">
+      <div class="collection" data-aos="fade-up" data-aos-delay="150">
         <div class="image-wrapper">
-          <img src="assets/implants-cover.jpeg" alt="Neural Implants" class="collection-image scale-in" />
+          <img src="assets/implants-cover.png" alt="Neural Implants" class="collection-image" />
         </div>
         <div class="collection-content">
           <h2>Neural Implants</h2>
@@ -75,22 +75,5 @@
   <script>
     AOS.init({ once: true });
   </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-      } else {
-        entry.target.classList.remove("animated");
-      }
-    });
-  }, { threshold: 0.2 }); // threshold = kiek elementas matomas, pvz., 0.2 = 20%
-
-  document.querySelectorAll('.scale-in').forEach(function(img) {
-    observer.observe(img);
-  });
-});
-</script>
 </body>
 </html>
