@@ -7,11 +7,6 @@ html, body {
   font-family: 'Inter', sans-serif;
   background: #111014;
   color: #ededed;
-  scroll-behavior: smooth;
-}
-
-body, main {
-  min-height: 100vh;
 }
 
 header {
@@ -35,32 +30,31 @@ h1 {
   margin: 0;
 }
 
-/* --- FULLSCREEN COVER SCROLL --- */
-.fullscreen-scroll {
+/* -- STICKY COVERS -- */
+.stacked-covers {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.cover-section {
+.stacked-section {
   position: relative;
   width: 100vw;
-  height: 100vh;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1;
-  box-shadow: 0 14px 64px 0 #131929cc;
-  /* Sticky stacking: */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sticky magic: */
+  position: sticky;
   top: 0;
+  z-index: 1;
 }
 
-.cover-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+.stacked-section + .stacked-section {
+  z-index: 2;
 }
 
 .overlay {
@@ -70,6 +64,7 @@ h1 {
   background: linear-gradient(180deg, #0e171c 20%, #16191cdd 80%);
   mix-blend-mode: multiply;
   opacity: 0.64;
+  pointer-events: none;
 }
 
 .cover-content {
@@ -80,10 +75,11 @@ h1 {
   text-align: center;
   color: #fff;
   padding: 0 2vw;
+  background: none;
   transition: opacity 0.4s, transform 0.45s;
 }
 
-.cover-section h2 {
+.stacked-section h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.8rem;
   color: #39e4fd;
@@ -91,7 +87,7 @@ h1 {
   letter-spacing: 1.7px;
   text-shadow: 0 8px 34px #000b;
 }
-.cover-section p {
+.stacked-section p {
   font-size: 1.24rem;
   color: #e7eaff;
   margin-bottom: 38px;
@@ -126,9 +122,8 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
-  .cover-section h2 {
+  .stacked-section h2 {
     font-size: 1.4rem;
   }
   .cover-content {
