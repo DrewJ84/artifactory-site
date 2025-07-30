@@ -79,7 +79,7 @@ main {
 .scale-in {
   transform: scale(1.08);
   opacity: 0;
-  transition: transform 3s cubic-bezier(.45,1.6,.43,.97), opacity 0.7s cubic-bezier(.45,1.6,.43,.97);
+  transition: transform 5s cubic-bezier(.45,1.6,.43,.97), opacity 0.7s cubic-bezier(.45,1.6,.43,.97);
 }
 .scale-in.animated {
   transform: scale(1);
