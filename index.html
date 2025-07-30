@@ -1,96 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artifactory</title>
-  <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Artifactory – Futuristic digital artifacts. Curated collections of neural, cosmic, and biomechanical NFTs.">
-  <meta name="keywords" content="NFT, Artifactory, Neural Implants, Etherstones, digital art, futuristic, cryptoart, OpenSea, collectibles">
-  <meta name="author" content="Artifactory Team">
-  <meta name="robots" content="index, follow">
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: all 0.3s ease; */
+  scroll-behavior: smooth;
+}
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Artifactory – Futuristic Digital Artifacts">
-  <meta property="og:description" content="Explore unique NFT collections: Etherstones & Neural Implants. Sci-fi digital collectibles forged beyond time.">
-  <meta property="og:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
-  <meta property="og:url" content="https://www.artifactory.lt/">
-  <meta property="og:type" content="website">
+/* *[style*="transform"],
+*[style*="animation"] {
+  opacity: 0;
+} */
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Artifactory – Futuristic Digital Artifacts">
-  <meta name="twitter:description" content="Explore unique NFT collections like Etherstones and Neural Implants.">
-  <meta name="twitter:image" content="https://www.artifactory.lt/assets/etherstones-cover.png">
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
 
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="header-container" data-aos="fade-down" data-aos-delay="0">
-      <h1>Artifactory</h1>
-    </div>
-  </header>
+header {
+  background: linear-gradient(to bottom, #111, #1c1c1c);
+}
 
-  <main>
-    <section class="collections">
-      <div class="collection">
-        <div class="image-wrapper">
-          <img src="assets/etherstones-cover.jpeg" alt="The Etherstones" class="collection-image scale-in" />
-        </div>
-        <div class="collection-content">
-          <h2>The Etherstones</h2>
-          <p>112 mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
-          <div class="button-center">
-            <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="button-ghost">View on OpenSea</a>
-          </div>
-        </div>
-      </div>
+.header-container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
 
-      <div class="collection">
-        <div class="image-wrapper">
-          <img src="assets/implants-cover.jpeg" alt="Neural Implants" class="collection-image scale-in" />
-        </div>
-        <div class="collection-content">
-          <h2>Neural Implants</h2>
-          <p>400 biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
-          <div class="button-center">
-            <a href="#" class="button-ghost">Coming Soon</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  color: #00f6ff;
+  letter-spacing: 1.5px;
+}
 
-  <footer>
-    <div data-aos="fade" data-aos-delay="200" data-aos-once="true" data-aos-offset="0">
-      <p>&copy; 2025 Artifactory</p>
-    </div>
-  </footer>
+main {
+  flex: 1 0 auto;
+}
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-  </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated");
-      } else {
-        entry.target.classList.remove("animated");
-      }
-    });
-  }, { threshold: 0.2 }); // threshold = kiek elementas matomas, pvz., 0.2 = 20%
+.collections {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 
-  document.querySelectorAll('.scale-in').forEach(function(img) {
-    observer.observe(img);
-  });
-});
-</script>
-</body>
-</html>
+.collection {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection:hover {
+  box-shadow: 0 8px 16px rgba(200, 200, 200, 0.25);
+}
+
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  /* Nauja: */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 340px; /* ar kokį nori paveikslėlio aukštį */
+}
+
+.collection-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Nauja: */
+  transform-origin: center center;
+}
+
+.scale-in {
+  transform: scale(1.08);
+  opacity: 0;
+  transition: transform 5s cubic-bezier(.45,1.6,.43,.97), opacity 1.2s cubic-bezier(.45,1.6,.43,.97);
+}
+.scale-in.animated {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.collection-content {
+  padding: 40px 20px;
+}
+
+.collection h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  color: #00e1ff;
+  margin-bottom: 10px;
+}
+
+.collection p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button-ghost {
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-ghost:hover {
+  color: #ccc;
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+  opacity: 1
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .collections {
+    padding: 40px 10px;
+    gap: 40px;
+  }
+
+  .collection-content {
+    padding: 30px 20px;
+  }
+
+  .collection h2 {
+    font-size: 24px;
+  }
+
+  .collection p {
+    font-size: 16px;
+  }
+
+  .button-ghost {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
