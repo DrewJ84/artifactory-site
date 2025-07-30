@@ -75,8 +75,17 @@ main {
   width: 100%;
   display: block;
   border-radius: 20px 20px 0 0;
-  transform: scale(1);
   transition: transform 0.5s ease;
+}
+
+.scale-in {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(.45,1.6,.43,.97), opacity 0.7s cubic-bezier(.45,1.6,.43,.97);
+}
+.scale-in.animated {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .collection:hover .collection-image {
@@ -128,16 +137,6 @@ footer {
   font-size: 14px;
   color: #777;
   opacity: 1
-}
-
-.scale-in {
-  transform: scale(0.9);
-  opacity: 0;
-  transition: transform 0.7s cubic-bezier(.45,1.6,.43,.97), opacity 0.7s cubic-bezier(.45,1.6,.43,.97);
-}
-.scale-in.animated {
-  transform: scale(1);
-  opacity: 1;
 }
 
 @media (max-width: 600px) {
