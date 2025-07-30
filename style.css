@@ -11,6 +11,17 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Fiksuotas background – VISADA pirmas paveikslėlis */
+.fixed-bg {
+  position: fixed;
+  z-index: 0;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/etherstones-cover.png') center center / cover no-repeat;
+  pointer-events: none;
+}
+
 /* HEADER – permatomas, fiksuotas, blur */
 .sticky-header {
   position: fixed;
@@ -18,12 +29,10 @@ html, body {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 0;
-  background: rgba(18, 18, 23, 0.35);
+  background: rgba(18, 18, 23, 0.36);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  transition: background 0.28s;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .header-container {
   max-width: 1200px;
@@ -31,7 +40,6 @@ html, body {
   padding: 28px 42px 16px 42px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 h1 {
   font-family: 'Orbitron', sans-serif;
@@ -41,40 +49,67 @@ h1 {
   margin: 0;
 }
 
-/* STICKY SECTIONS – stacked scroll efektas */
-.stacked-scroll {
-  width: 100vw;
-  min-height: 100vh;
+main {
   position: relative;
-  overflow-x: hidden;
-  z-index: 0;
-  /* Viskas už header */
-  padding-top: 80px;
+  z-index: 2;
 }
-.stacked-section {
-  position: sticky;
-  top: 0;
-  min-height: 100vh;
-  height: 100vh;
+
+.scroll-content {
   width: 100vw;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 90px; /* tiek, kiek headerio aukštis */
+}
+
+/* Pirmas blokas – nemato backgroundo, nes jis visada fiksuotas */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 1;
-  /* Tamsus overlay iš apačios į viršų */
+  z-index: 2;
 }
-.stacked-section::after {
+.hero-section .section-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-bottom: 10vh;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 620px;
+  margin: 0 auto;
+  /* šiek tiek shadow tekstui */
+  text-shadow: 0 8px 24px #000d;
+}
+
+/* Sekantys blokai – su savo background, slenka virš fono */
+.cover-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 10;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.cover-section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20,24,36,0.17) 10%, rgba(18,18,24,0.72) 95%);
+  background: linear-gradient(180deg, rgba(20,24,36,0.15) 10%, rgba(18,18,24,0.65) 95%);
   pointer-events: none;
   z-index: 1;
 }
-
 .section-content {
   position: relative;
   z-index: 2;
@@ -89,7 +124,7 @@ h1 {
   max-width: 620px;
   margin: 0 auto;
 }
-.stacked-section h2 {
+h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.7rem;
   color: #39e4fd;
@@ -97,13 +132,12 @@ h1 {
   margin: 0 0 22px 0;
   text-shadow: 0 8px 32px #000b;
 }
-.stacked-section p {
+p {
   font-size: 1.15rem;
   color: #d9eaff;
   margin: 0 0 32px 0;
   text-shadow: 0 3px 12px #0005;
 }
-
 .section-btn {
   display: inline-block;
   padding: 18px 38px;
@@ -145,7 +179,7 @@ footer {
     padding-bottom: 7vh;
     max-width: 99vw;
   }
-  .stacked-section h2 {
+  h2 {
     font-size: 1.2rem;
   }
   .section-btn {
