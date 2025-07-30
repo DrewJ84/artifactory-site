@@ -75,12 +75,20 @@
   <script>
     AOS.init({ once: true });
   </script>
-  <script>
-window.addEventListener('DOMContentLoaded', function() {
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animated");
+      } else {
+        entry.target.classList.remove("animated");
+      }
+    });
+  }, { threshold: 0.2 }); // threshold = kiek elementas matomas, pvz., 0.2 = 20%
+
   document.querySelectorAll('.scale-in').forEach(function(img) {
-    setTimeout(function(){
-      img.classList.add('animated');
-    }, 100);
+    observer.observe(img);
   });
 });
 </script>
