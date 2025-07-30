@@ -8,10 +8,10 @@
   scroll-behavior: smooth;
 }
 
-*[style*="transform"],
+/* *[style*="transform"],
 *[style*="animation"] {
   opacity: 0;
-}
+} */
 
 html, body {
   height: 100%;
@@ -59,7 +59,7 @@ main {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   overflow: hidden;
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .collection:hover {
