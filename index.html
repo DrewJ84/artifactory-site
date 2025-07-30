@@ -75,5 +75,14 @@
   <script>
     AOS.init({ once: true });
   </script>
+  <script>
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.scale-in').forEach(function(img) {
+    setTimeout(function(){
+      img.classList.add('animated');
+    }, 100);
+  });
+});
+</script>
 </body>
 </html>
