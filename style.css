@@ -87,10 +87,6 @@ main {
   opacity: 1;
 }
 
-.collection:hover .collection-image {
-  transform: scale(1.05);
-}
-
 .collection-content {
   padding: 40px 20px;
 }
