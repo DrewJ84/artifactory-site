@@ -1776,26 +1776,26 @@ span {
   overflow: hidden;
 }
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
+  position: fixed; !important;
+  top: 0; !important;
+  width: 100%; !important;
+  z-index: 100; !important;
+  background: transparent; !important;
+  box-shadow: none; !important;
+  backdrop-filter: none; !important;
 }
 .header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 26px 40px 18px 40px;
-  display: flex;
-  align-items: center;
+  max-width: 1200px; !important;
+  margin: 0 auto; !important;
+  padding: 26px 40px 18px 40px; !important;
+  display: flex; !important;
+  align-items: center; !important;
 }
 .logo {
-  font-family: 'Orbitron', sans-serif;
-  color: #00f6ff;
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-right: auto;
+  font-family: 'Orbitron', sans-serif; !important;
+  color: #00f6ff; !important;
+  font-size: 2.1rem; !important;
+  font-weight: 700; !important;
+  letter-spacing: 2px; !important;
+  margin-right: auto; !important;
 }
