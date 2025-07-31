@@ -62,11 +62,6 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.collection:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(200, 200, 200, 0.25);
-}
-
 .image-wrapper {
   overflow: hidden;
 }
@@ -77,10 +72,6 @@ main {
   border-radius: 20px 20px 0 0;
   transform: scale(1);
   transition: transform 0.5s ease;
-}
-
-.collection:hover .collection-image {
-  transform: scale(1.05);
 }
 
 .collection-content {
