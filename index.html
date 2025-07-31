@@ -75,5 +75,24 @@
   <script>
     AOS.init({ once: true });
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".collection-image");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("shrink");
+        } else {
+          entry.target.classList.remove("shrink"); // jei nori, kad efektas kartotųsi
+        }
+      });
+    }, {
+      threshold: 0.5, // kai bent 50% matoma
+    });
+
+    images.forEach(image => observer.observe(image));
+  });
+</script>
 </body>
 </html>
