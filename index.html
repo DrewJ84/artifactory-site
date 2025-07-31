@@ -43,7 +43,7 @@
         </div>
         <div class="collection-content">
           <h2>The Etherstones</h2>
-          <p>112 mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
+          <p>Mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
           <div class="button-center">
             <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="button-ghost">View on OpenSea</a>
           </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="collection-content">
           <h2>Neural Implants</h2>
-          <p>400 biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
+          <p>Biomechanical micro-implants engineered for direct brain integration. Each one carries hidden power. Launching soon.</p>
           <div class="button-center">
             <a href="#" class="button-ghost">Coming Soon</a>
           </div>
@@ -73,25 +73,49 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
+    AOS.init({ once: false });
   </script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    // 🌑 1. Šis – TAVO esamas – lieka kaip yra
     const images = document.querySelectorAll(".collection-image");
 
-    const observer = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("shrink");
         } else {
-          entry.target.classList.remove("shrink"); // jei nori, kad efektas kartotųsi
+          entry.target.classList.remove("shrink"); // jei nori, kad kartotųsi
         }
       });
     }, {
       threshold: 0.5, // kai bent 50% matoma
     });
 
-    images.forEach(image => observer.observe(image));
+    images.forEach(image => imageObserver.observe(image));
+
+
+    // 📱 2. Naujas – tik mobiliesiems, skirtas .collection blokams
+    const isMobile = window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      const collections = document.querySelectorAll(".collection");
+
+      const collectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add("visible");
+          } else {
+            el.classList.remove("visible");
+          }
+        });
+      }, {
+        threshold: 0.5 // kai 70% matoma
+      });
+
+      collections.forEach(el => collectionObserver.observe(el));
+    }
   });
 </script>
 </body>
