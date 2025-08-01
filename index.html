@@ -27,6 +27,10 @@
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper CSS ir JS iš CDN: -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header>
@@ -44,12 +48,38 @@
         <div class="collection-content">
           <h2>The Etherstones</h2>
           <p>Mystical cosmic stones, each holding unique elemental energies. Originating from an ancient dimension beyond comprehension.</p>
-          <div class="button-center">
+          <div class="button-center button-row">
+            <a class="open-modal button-ghost">View Info</a>
             <a href="https://opensea.io/collection/the-etherstones" target="_blank" class="button-ghost">View on OpenSea</a>
           </div>
         </div>
       </div>
-
+<!-- Modal langas -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-content">
+    <h2>The Etherstones</h2>
+<div class="modal-gallery-wrapper">
+  <div class="modal-gallery" id="gallery">
+    <img src="assets/eth1.png" alt="Preview 1" />
+    <img src="assets/eth2.png" alt="Preview 2" />
+    <img src="assets/eth3.png" alt="Preview 3" />
+    <img src="assets/eth4.png" alt="Preview 4" />
+    <img src="assets/eth5.png" alt="Preview 5" />
+    <img src="assets/eth6.png" alt="Preview 6" />
+    <img src="assets/eth7.png" alt="Preview 7" />
+    <img src="assets/eth8.png" alt="Preview 8" />
+  </div>
+  <div class="scroll-buttons">
+    <button class="scroll-btn left">&larr;</button>
+    <button class="scroll-btn right">&rarr;</button>
+  </div>
+</div>
+<p class="modal-description">
+  After a cataclysmic cosmic explosion, countless mysterious stones were scattered across the universe — each infused with ancient and untamed energy. These are no ordinary artifacts; they resonate with elemental forces, forgotten knowledge, and fragments of creation itself. For ages, they’ve remained hidden in the farthest reaches of space, lost across dimensions, worlds, and time. Legends whisper that those who manage to find and unite them will gain power beyond imagination — the ability to bend reality, alter fate, and awaken cosmic truths long buried. But such power comes with a price. Many have searched, few have returned. The shards are calling once more… Will you answer? The journey begins with a single stone.
+</p>
+    <button class="close-modal">Close</button>
+  </div>
+</div>
       <div class="collection" data-aos="fade-up" data-aos-delay="150">
         <div class="image-wrapper">
           <img src="assets/implants-cover.jpeg" alt="Neural Implants" class="collection-image" />
@@ -116,6 +146,59 @@
 
       collections.forEach(el => collectionObserver.observe(el));
     }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const openBtn = document.querySelector(".open-modal");
+    const closeBtn = document.querySelector(".close-modal");
+    const modal = document.getElementById("modal");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+
+    // Paspaudus už modal ribų – uždaryti
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const gallery = document.getElementById("gallery");
+    const images = gallery.querySelectorAll("img");
+    const btnLeft = document.querySelector(".scroll-btn.left");
+    const btnRight = document.querySelector(".scroll-btn.right");
+
+    let currentIndex = 0;
+
+    function scrollToIndex(index) {
+      const imageWidth = images[0].clientWidth + 20; // įskaitom gap
+      gallery.scrollTo({
+        left: index * imageWidth,
+        behavior: "smooth"
+      });
+    }
+
+    btnRight.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      scrollToIndex(currentIndex);
+    });
+
+    btnLeft.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      scrollToIndex(currentIndex);
+    });
+
+    // Inicialiai nustato pirmą vaizdą
+    scrollToIndex(currentIndex);
   });
 </script>
 </body>
