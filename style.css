@@ -282,6 +282,30 @@ footer {
     font-size: 32px;
   }
 
+  .modal-content {
+    padding: 15px;
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-gallery {
+    height: 250px;
+  }
+
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .scroll-buttons {
+    gap: 10px;
+  }
+
+  .scroll-btn {
+    padding: 6px 14px;
+    font-size: 16px;
+  }
+
   .collections {
     padding: 60px 10px;
     gap: 40px;
