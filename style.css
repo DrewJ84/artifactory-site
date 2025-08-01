@@ -263,7 +263,13 @@ footer {
   }
   .modal-gallery {
     height: 220px;
-    width: 80%;
+  }
+
+  .modal-gallery img {
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
   }
   .modal-description {
     font-size: 14px;
