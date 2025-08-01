@@ -264,13 +264,6 @@ footer {
   .modal-gallery {
     height: 220px;
   }
-
-  .modal-gallery img {
-    flex: 0 0 80%;
-    max-width: 80%;
-    margin: 0 auto;
-    display: block;
-  }
   .modal-description {
     font-size: 14px;
     line-height: 1.5;
@@ -281,8 +274,6 @@ footer {
   .scroll-btn {
     padding: 6px 14px;
     font-size: 15px;
-    min-width: 44px;   /* visiems vienodas */
-    min-height: 38px;
   }
   .collections {
     padding: 60px 10px;
