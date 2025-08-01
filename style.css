@@ -285,11 +285,11 @@ footer {
   .modal-content {
     padding: 15px;
     width: 95%;
-    max-height: 90vh;
+    max-height: 85vh;
   }
 
   .modal-gallery {
-    height: 250px;
+    height: 220px;
   }
 
   .modal-description {
@@ -303,7 +303,7 @@ footer {
 
   .scroll-btn {
     padding: 6px 14px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .collections {
