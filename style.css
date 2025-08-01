@@ -263,6 +263,7 @@ footer {
   }
   .modal-gallery {
     height: 220px;
+    width: 80%;
   }
   .modal-description {
     font-size: 14px;
