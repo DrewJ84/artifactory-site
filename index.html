@@ -43,7 +43,7 @@
   <main>
     <section class="collections">
       <!-- KOLEKCIJA #1 -->
-      <div class="collection" data-aos="slide-up" data-aos-delay="150">
+      <div class="collection" data-aos="fade-up" data-aos-delay="150">
         <div class="image-wrapper">
           <img src="assets/etherstones-cover.jpeg" alt="The Etherstones" class="collection-image" />
         </div>
@@ -87,7 +87,7 @@
       <!-- /MODALAS -->
 
       <!-- KOLEKCIJA #2 -->
-      <div class="collection" data-aos="slide-up" data-aos-delay="150">
+      <div class="collection" data-aos="fade-up" data-aos-delay="150">
         <div class="image-wrapper">
           <img src="assets/implants-cover.jpeg" alt="Neural Implants" class="collection-image" />
         </div>
@@ -132,7 +132,7 @@
         });
       }, { threshold: 0.75 });
       images.forEach(image => imageObserver.observe(image));
-
+/*
       // Tik mobiliesiems – fade-in kolekcijoms
       const isMobile = window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
       if (isMobile) {
@@ -149,7 +149,7 @@
         }, { threshold: 0.75 });
         collections.forEach(el => collectionObserver.observe(el));
       }
-    });
+    }); */
   </script>
 
   <!-- Modal valdymas -->
