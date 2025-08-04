@@ -307,15 +307,6 @@ footer {
     padding: 60px 10px;
     gap: 40px;
   }
-  .collection {
-    opacity: 0;
-    transform: scale(1.05);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .collection.visible {
-    opacity: 1;
-    transform: scale(1);
-  }
   .collection-content {
     padding: 30px 20px;
   }
