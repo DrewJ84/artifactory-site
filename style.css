@@ -140,16 +140,18 @@ main {
 }
 .modal-gallery {
   display: flex;
+  overflow: hidden; 
   overflow-x: auto;
+  width: 100%;
+  height: 100%;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  gap: 20px;
 }
 .modal-gallery img {
   flex: 0 0 100%;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   object-fit: cover;
   scroll-snap-align: center;
   border-radius: 10px;
@@ -162,6 +164,25 @@ main {
 }
 
 /* === RODYKLĖS po paveikslėliais === */
+.scroll-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.scroll-btn:active {
+  background: #eee;
+}
 .scroll-buttons {
   display: flex;
   justify-content: center;
@@ -256,13 +277,20 @@ footer {
   h1 {
     font-size: 32px;
   }
-  .modal-content {
-    padding: 15px;
-    width: 95%;
-    max-height: 85vh;
-  }
+.modal-content {
+  max-width: 95vw;       /* maksimalus plotis 95% viewport width */
+  max-height: 85vh;      /* maksimalus aukštis 85% viewport height */
+  overflow-y: auto;      /* jei turinys aukštesnis, bus scroll */
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(255 255 255 / 0.1);
+  border-radius: 12px;
+  color: white;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
   .modal-gallery {
-    height: 220px;
+    height: 100%;
   }
   .modal-description {
     font-size: 14px;
