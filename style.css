@@ -55,7 +55,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;  /* vertikalus centravimas */
-  gap: 60px;
+  gap: 40px;
   box-sizing: border-box;
 }
 
@@ -263,10 +263,40 @@ main {
   color: rgb(71, 71, 71);
 }
 
+/* === SOCIAL ICONS === */
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center; /* centras, jei footeris platus */
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  opacity: 0.8;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.13);
+  opacity: 1;
+}
+
+.social-links svg {
+  display: block;
+  background: #222;      /* arba #fff, priklausomai nuo tavo footer fono */
+  border-radius: 50%;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+}
+
 /* === FOOTER === */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 8px 0 12px 0;
   font-size: 14px;
   color: #777;
   opacity: 1
