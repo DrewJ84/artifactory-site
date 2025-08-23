@@ -257,13 +257,21 @@ main {
 
 /* === Ghost mygtukas su animacija === */
 .button-ghost {
+  -webkit-tap-highlight-color: transparent; /* panaikina mėlyną Android/iOS */
   position: relative;
   display: inline-block;
   padding: 12px 24px;
   color: #fff;
   background: transparent;
+  outline: none;
   text-decoration: none;
   font-weight: bold;
+}
+.button-ghost:focus,
+.button-ghost:active {
+  outline: none;
+  background: transparent !important; /* neutralizuoja mėlyną foną */
+  color: inherit;
 }
 .button-ghost::before {
   content: "";
@@ -299,10 +307,13 @@ main {
 a {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  text-decoration: none;
 }
 a:focus,
 a:active {
   outline: none;
+  background: transparent !important; 
+  color: inherit;
 }
 
 /* (nebūtina) jeigu nori, kad paspaudus mygtukas ir fonas nepasikeistų */
