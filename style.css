@@ -165,7 +165,7 @@ main {
 }
 
 .modal-description p {
-  margin: 0 0 32px 0;   /* 24px tarpas apačioje tarp pastraipų */
+  margin: 0 0 28px 0;   /* 24px tarpas apačioje tarp pastraipų */
   text-indent: 2em;     /* pirmos eilutės įtrauka */
 }
 
