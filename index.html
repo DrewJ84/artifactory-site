@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Uždaryti modalą
   document.querySelectorAll('.modal-overlay').forEach(modal => {
-    const closeBtn = modal.querySelector('.close-modal, .close-modal2');
+    const closeBtn = modal.querySelector('.close-modal, .close-modal2, .modal-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     }
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const openBtn = document.querySelector(".open-modal2");
-      const closeBtn = document.querySelector(".close-modal2,.modal-close");
+      const closeBtn = document.querySelector(".close-modal2");
       const modal = document.getElementById("modal2");
 
       openBtn.addEventListener("click", () => {
