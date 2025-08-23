@@ -161,6 +161,8 @@ main {
   margin-top: 20px;
   text-align: justify;
   line-height: 1.6;
+  margin: 1em 0;            /* tarpas tarp pastraipų */
+  text-indent: 2em
 }
 
 /* === RODYKLĖS po paveikslėliais === */
