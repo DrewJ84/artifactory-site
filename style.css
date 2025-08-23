@@ -223,11 +223,26 @@ main {
   cursor: pointer;
 }
 
-/* === KOLEKCIJOS TURINYS === */
-.collection h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 32px;
-  color: #00e1ff;
+/* X mygtukas */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ff4444; /* užvedus pelę pakeičia spalvą */
+}
+
+/* === KO #00e1ff;
   margin-bottom: 10px;
 }
 .collection p {
