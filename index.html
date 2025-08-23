@@ -276,25 +276,26 @@ And what will they become?
 
   <!-- Modal1 valdymas -->
   <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Atidaryti modalą
-  document.querySelectorAll('.open-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-modal');
+  document.querySelectorAll(".open-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
       const modal = document.getElementById(modalId);
-      if (modal) modal.classList.add('show');
+      if (modal) modal.classList.add("show");
     });
   });
 
-  // Uždaryti modalą (X arba apačioje esantys mygtukai)
-document.querySelectorAll('.modal-overlay').forEach(modal => {
-  const closeBtns = modal.querySelectorAll('.close-modal, .close-modal2, .modal-close');
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => modal.classList.remove('show'));
-  });
+  // Uždaryti modalą (X, apačioje esantis Close mygtukas arba už modal ribų)
+  document.querySelectorAll(".modal-overlay").forEach(modal => {
+    const closeBtns = modal.querySelectorAll(".modal-close, .close-modal, .close-modal2");
+    closeBtns.forEach(btn => {
+      btn.addEventListener("click", () => modal.classList.remove("show"));
+    });
 
-  modal.addEventListener('click', e => {
-    if (e.target === modal) modal.classList.remove('show');
+    modal.addEventListener("click", e => {
+      if (e.target === modal) modal.classList.remove("show");
+    });
   });
 });
   </script>
