@@ -70,7 +70,7 @@
       <!-- MODALAS PRIE KOLEKCIJOS #1 -->
       <div class="modal-overlay" id="modal">
         <div class="modal-content">
-          <button class="modal-close">&times;</button>  <!-- X mygtukas -->
+          <!-- <button class="modal-close">&times;</button>  <!-- X mygtukas -->
           <h2>The Etherstones</h2>
           <div class="modal-gallery-wrapper">
             <div class="modal-gallery" id="gallery">
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Uždaryti modalą
   document.querySelectorAll('.modal-overlay').forEach(modal => {
-    const closeBtn = modal.querySelector('.close-modal, .close-modal2, .modal-close');
+    const closeBtn = modal.querySelector('.close-modal, .close-modal2');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     }
