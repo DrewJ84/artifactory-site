@@ -157,12 +157,16 @@ main {
   border-radius: 10px;
   max-height: 6000px;
 }
+
 .modal-description {
   margin-top: 20px;
   text-align: justify;
   line-height: 1.6;
-  margin: 1em 0;            /* tarpas tarp pastraipų */
-  text-indent: 2em
+}
+
+.modal-description p {
+  margin: 0 0 24px 0;   /* 24px tarpas apačioje tarp pastraipų */
+  text-indent: 2em;     /* pirmos eilutės įtrauka */
 }
 
 /* === RODYKLĖS po paveikslėliais === */
