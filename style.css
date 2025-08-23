@@ -284,6 +284,32 @@ main {
   color: rgb(71, 71, 71);
 }
 
+/* Panaikinam mėlyną tap highlight ir fokusų kontūrus ant mygtukų/nuorodų */
+.button-ghost,
+.button-ghost:focus,
+.button-ghost:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* iOS/Android */
+  -webkit-touch-callout: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Papildomai – visoms nuorodoms (jei kur nors dar liktų) */
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+/* (nebūtina) jeigu nori, kad paspaudus mygtukas ir fonas nepasikeistų */
+.button-ghost:active {
+  background: transparent;
+}
+
 /* === SOCIAL ICONS === */
 
 .social-links {
