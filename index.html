@@ -292,6 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) {
       closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     }
+    document.querySelector(".modal-close").addEventListener("click", function() {
+  document.querySelector(".modal").style.display = "none";
+});
     modal.addEventListener('click', e => {
       if (e.target === modal) modal.classList.remove('show');
     });
