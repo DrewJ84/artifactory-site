@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8" />
     <title>Artifactory - Home</title>
-    <!-- Metadata -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Griežta CSP be 'unsafe-eval' -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net data:; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap">
+
+    <!-- Socicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/socicon@3.0.5/css/socicon.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/ico/favicon.png" />
-    <!-- CSS Plugins -->
-    <link rel="stylesheet" href="assets/css/plugins.min.css">
-    <!-- Custom CSS File -->
+
+    <!-- Tavo pagrindinis CSS (palik) -->
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
+
+    <!-- GA loader -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK4TTF4VDV"></script>
+  </head>
+
   <body class="page-home">
     <div class="ms-main-container">
       <!-- Preloader -->
       <div class="ms-preloader"></div>
+
       <!-- Header -->
       <header class="ms-header navbar-white">
         <nav class="ms-nav">
@@ -26,59 +41,48 @@
             </a>
           </div>
           <button class="hamburger" type="button" data-toggle="navigation">
-          <span class="hamburger-box">
-            <span class="hamburger-label">menu</span>
-            <span class="hamburger-inner"></span>
-          </span>
+            <span class="hamburger-box">
+              <span class="hamburger-label">menu</span>
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
           <div class="height-full-viewport">
             <ul class="ms-navbar">
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="index.html" data-type="page-transition">
                   <span class="ms-btn">home</span>
                   <span class="nav-item__label">Back to home page</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="collections.html" data-type="page-transition">
                   <span class="ms-btn">Collections</span>
                   <span class="nav-item__label">View all our collections</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="the-etherstones.html" data-type="page-transition">
                   <span class="ms-btn">The Etherstones</span>
                   <span class="nav-item__label">Discover The Etherstones NFT collection</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="timeline.html" data-type="page-transition">
                   <span class="ms-btn">timeline</span>
                   <span class="nav-item__label">Dive into the stories</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="about.html" data-type="page-transition">
                   <span class="ms-btn">about</span>
                   <span class="nav-item__label">Learn more about Artifactory</span>
                 </a>
               </li>
-              <!-- Nav Link 
-              <li class="nav-item">
-                <a href="contact.html" data-type="page-transition">
-                  <span class="ms-btn">contact</span>
-                  <span class="nav-item__label">Get in touch and find us</span>
-                </a>
-              </li> -->
             </ul>
           </div>
         </nav>
       </header>
+
       <!-- Container -->
       <main class="ms-container home-slider">
         <!-- Swiper Slider -->
@@ -88,111 +92,103 @@
             <div class="swiper-slide">
               <div class="slide-inner" data-swiper-parallax="45%">
                 <div class="overlay"></div>
-                  <div class="slide-inner--image" style="background-image: url('assets/images/home-slider/img-lg1.jpg')"
-                      data-bg-desktop="assets/images/home-slider/img-lg1.jpg"
-                      data-bg-mobile="assets/images/home-slider/img-lg1-mobile.jpg">
-                  </div>
+                <div class="slide-inner--image"
+                     style="background-image: url('assets/images/home-slider/img-lg1.jpg')"
+                     data-bg-desktop="assets/images/home-slider/img-lg1.jpg"
+                     data-bg-mobile="assets/images/home-slider/img-lg1-mobile.jpg"></div>
                 <div class="slide-inner--info">
-                    <h1>
-                      <span class="title-main">Artifactory</span><br>
-                      <span class="title-sub">nft universe</span>
-                    </h1>
-                  <!-- <a href="gallery.html" data-type="page-transition" class="ms-btn--slider">take a look</a> -->
+                  <h1>
+                    <span class="title-main">Artifactory</span><br>
+                    <span class="title-sub">nft universe</span>
+                  </h1>
                 </div>
               </div>
             </div>
+
             <!-- Slide -->
             <div class="swiper-slide">
               <div class="slide-inner" data-swiper-parallax="45%">
                 <div class="overlay"></div>
-                  <div class="slide-inner--image" style="background-image: url('assets/images/home-slider/img-lg2.jpg')"
-                      data-bg-desktop="assets/images/home-slider/img-lg2.jpg"
-                      data-bg-mobile="assets/images/home-slider/img-lg2-mobile.jpg">
-                  </div>
+                <div class="slide-inner--image"
+                     style="background-image: url('assets/images/home-slider/img-lg2.jpg')"
+                     data-bg-desktop="assets/images/home-slider/img-lg2.jpg"
+                     data-bg-mobile="assets/images/home-slider/img-lg2-mobile.jpg"></div>
                 <div class="slide-inner--info">
-                  <!-- <h1>The Etherstones<br>stones of power</h1> -->
-                    <h1>
-                      <span class="title-main">The Etherstones</span><br>
-                      <span class="title-sub">Stones of Power</span>
-                    </h1>
+                  <h1>
+                    <span class="title-main">The Etherstones</span><br>
+                    <span class="title-sub">Stones of Power</span>
+                  </h1>
                   <a href="the-etherstones.html" data-type="page-transition" class="ms-btn--slider">take a look</a>
                 </div>
               </div>
             </div>
+
             <!-- Slide -->
             <div class="swiper-slide">
               <div class="slide-inner" data-swiper-parallax="45%">
                 <div class="overlay"></div>
-                  <div class="slide-inner--image" style="background-image: url('assets/images/home-slider/img-lg3.jpg')"
-                      data-bg-desktop="assets/images/home-slider/img-lg3.jpg"
-                      data-bg-mobile="assets/images/home-slider/img-lg3-mobile.jpg">
-                  </div>
+                <div class="slide-inner--image"
+                     style="background-image: url('assets/images/home-slider/img-lg3.jpg')"
+                     data-bg-desktop="assets/images/home-slider/img-lg3.jpg"
+                     data-bg-mobile="assets/images/home-slider/img-lg3-mobile.jpg"></div>
                 <div class="slide-inner--info">
-                    <h1>
-                      <span class="title-main">new collection</span><br>
-                      <span class="title-sub">coming soon</span>
-                    </h1>
-                  <!-- <a href="gallery.html" data-type="page-transition" class="ms-btn--slider">take a look</a> -->
+                  <h1>
+                    <span class="title-main">new collection</span><br>
+                    <span class="title-sub">coming soon</span>
+                  </h1>
                 </div>
               </div>
             </div>
+
             <!-- Slide -->
             <div class="swiper-slide">
               <div class="slide-inner" data-swiper-parallax="45%">
                 <div class="overlay"></div>
-                  <div class="slide-inner--image" style="background-image: url('assets/images/home-slider/img-lg4.jpg')"
-                      data-bg-desktop="assets/images/home-slider/img-lg4.jpg"
-                      data-bg-mobile="assets/images/home-slider/img-lg4-mobile.jpg">
-                  </div>
+                <div class="slide-inner--image"
+                     style="background-image: url('assets/images/home-slider/img-lg4.jpg')"
+                     data-bg-desktop="assets/images/home-slider/img-lg4.jpg"
+                     data-bg-mobile="assets/images/home-slider/img-lg4-mobile.jpg"></div>
                 <div class="slide-inner--info">
-                    <h1>
-                      <span class="title-main">next chapter</span><br>
-                      <span class="title-sub">coming later</span>
-                    </h1>
-                  <!-- <a href="gallery.html" data-type="page-transition" class="ms-btn--slider">take a look</a> -->
+                  <h1>
+                    <span class="title-main">next chapter</span><br>
+                    <span class="title-sub">coming later</span>
+                  </h1>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="swiper-nav-btn">
             <div class="swiper-button-prev swiper-button-white">prev</div>
             <div class="swiper-button-next swiper-button-white">next</div>
           </div>
-          <!-- Pagination
-          <div class="expanded-timeline">
-            <div class="expanded-timeline__counter"><span></span><span></span></div>
-            <div class="swiper-pagination"></div>
-            <div class="scroll-message">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 15.98" class="scroll-svg"><title>Asset 1</title><g>
-              <g data-name="Layer 1"><polygon fill="#fff" points="0 4.64 0.71 5.34 3.85 2.2 3.85 15.98 4.85 15.98 4.85 2.2 8 5.34 8.71 4.64 4.35 0.29 0 4.64"></polygon><polygon fill="#fff" points="11.65 0 11.65 13.79 8.5 10.64 7.79 11.35 12.15 15.7 16.5 11.35 15.79 10.64 12.65 13.79 12.65 0 11.65 0"></polygon></g></g></svg>Scroll
-            </div>
-          </div>
-          -->
         </div>
       </main>
     </div>
-    <!-- JS Libraries -->
-    <!-- jquery-2.1.3.min js -->
-    <script type="text/javascript" src='assets/js/jquery-3.2.1.min.js'></script>
-    <!-- Vendors -->
-    <script type="text/javascript" src='assets/js/plugins.min.js'></script>
-    <!-- Main js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <!-- BG Swapper js -->
-     <script src="assets/js/bg-swapper.js"></script>
+
+    <!-- JS: tvarka svarbi -->
+    <!-- jQuery + Anime -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+    <!-- Swiper 11 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Filterizr v2 (jei naudoji filtravimą kitur) -->
+    <script src="https://cdn.jsdelivr.net/npm/filterizr@2.2.4/dist/filterizr.min.js" defer></script>
+
+    <!-- lightGallery (vietoj UniteGallery) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/css/lightgallery-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/lightgallery.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/plugins/zoom/lg-zoom.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.8.2/plugins/thumbnail/lg-thumbnail.umd.min.js" defer></script>
+
+    <!-- Formų validacija -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" defer></script>
+
+    <!-- Tavo JS -->
+    <script src="assets/js/main.fixed.js" defer></script>
+    <script src="assets/js/bg-swapper.js" defer></script>
   </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
