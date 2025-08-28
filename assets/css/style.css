@@ -33,10 +33,10 @@
  */
  
 /*Text font*/
-@import 'https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900';
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900');
 
 /*Social icons font*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/socicon/3.0.5/socicon.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/socicon/3.0.5/socicon.min.css');
 
 ::selection {
     background: #555;   
@@ -1485,3 +1485,4 @@ label.error {
     }
 
 }
+
