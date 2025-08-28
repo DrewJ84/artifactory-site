@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Mad Bear Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.png">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">emily</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li>Documentation</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+
+        <div class="doc-wrapper">
+            <div class="container">
+
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                        <!-- Download section -->
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Description</h2>
+                                <div class="section-block">
+                                    <b>Emily</b> - minimal portfolio HTML template for photography and design with friendly SEO, modern design and gallery which supports iPhone, iPad, Blackberry 6 , Android and desktop. It’s easy to use and concentrates on showcasing your work to potential clients. 
+                                    </p>
+                                </div>
+                            </section>
+                        <!-- /Download section -->
+
+<!-- What's included -->
+                        <section id="included" class="doc-section">
+                            <h2 class="section-title">What's included</h2>
+  
+                                <div class="code-block">
+                                    <h6>Files</h6>
+<pre class=" language-markup"><code class="language-markup">Emily - Creative Photography Portfolio/
+├── assets/
+│   ├── css/
+│   │   ├── vendors/
+│   │   │   ├── bootstrap-grid.min
+│   │   │   ├── ug-theme-default
+│   │   │   ├── unite-gallery
+│   │   │   └── swiper.min.css
+│   │   ├── plugins.min.css
+│   │   └── style.css
+│   ├── images/
+│   │   ├── albums/
+│   │   ├── gallery/
+│   │   ├── home-slider/
+│   │   └── home-slider/
+│   ├── js/
+│   │   ├── vendors/
+│   │   │   ├── anime.min.js
+│   │   │   ├── jquery.filterizr.min.js
+│   │   │   ├── jquery.validate.min.js
+│   │   │   ├── swiper.min.js
+│   │   │   ├── ug-theme-default.js
+│   │   │   ├── ug-theme-tiles.js
+│   │   │   └── unitegallery.min.js
+│   │   ├── jquery-3.2.1.min.js
+│   │   ├── main.js
+│   │   └── plugins.min.js
+├── about.html
+├── albums.html
+├── blog.html
+├── blog-single-page.html
+├── contact.html
+├── contact.php
+├── gallery.html
+└── index.html
+</code></pre>
+                                </div>
+
+                        </section>
+<!-- /What's included -->
+
+<!-- HTML Structure -->
+                        <section id="html" class="doc-section">
+                            <h2 class="section-title">HTML Structure</h2>
+                            <div id="home" class="section-block">
+                                <div class="code-block">
+                                    <h6>Home page slider</h6>
+                                    <p>Learn more: <a href="http://idangero.us/swiper/#.WdOyUjBl-Uk" target="_blank"> link</a></p>
+<pre class=" language-markup"><code class="language-markup">&#x3C;main class=&#x22;ms-container home-slider&#x22;&#x3E;
+  &#x3C;!-- Swiper Slider --&#x3E;
+  &#x3C;div class=&#x22;swiper-container&#x22;&#x3E;
+    &#x3C;div class=&#x22;swiper-wrapper&#x22;&#x3E;
+      &#x3C;!-- Slide --&#x3E;
+      &#x3C;div class=&#x22;swiper-slide&#x22;&#x3E;
+        &#x3C;div class=&#x22;slide-inner&#x22;&#x3E;
+          &#x3C;div class=&#x22;overlay&#x22;&#x3E;&#x3C;/div&#x3E;
+          &#x3C;div class=&#x22;slide-inner--image&#x22; style=&#x22;background-image: url(&#x27;IMAGE.jpg&#x27;)&#x22;&#x3E;&#x3C;/div&#x3E;
+          &#x3C;div class=&#x22;slide-inner--info&#x22;&#x3E;
+            &#x3C;h1&#x3E;TITLE&#x3C;/h1&#x3E;
+            &#x3C;a href=&#x22;gallery.html&#x22; data-type=&#x22;page-transition&#x22; class=&#x22;ms-btn--slider&#x22;&#x3E;take a look&#x3C;/a&#x3E;
+          &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      ...
+    &#x3C;div class=&#x22;swiper-nav-btn&#x22;&#x3E;
+      &#x3C;div class=&#x22;swiper-button-prev swiper-button-white&#x22;&#x3E;prev&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;swiper-button-next swiper-button-white&#x22;&#x3E;next&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- Pagination --&#x3E;
+    &#x3C;div class=&#x22;expanded-timeline&#x22;&#x3E;
+      &#x3C;div class=&#x22;expanded-timeline__counter&#x22;&#x3E;&#x3C;span&#x3E;&#x3C;/span&#x3E;&#x3C;span&#x3E;&#x3C;/span&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;swiper-pagination&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;scroll-message&#x22;&#x3E;
+        &#x3C;svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; viewBox=&#x22;0 0 16.5 15.98&#x22; class=&#x22;scroll-svg&#x22;&#x3E;&#x3C;title&#x3E;Asset 1&#x3C;/title&#x3E;&#x3C;g id=&#x22;0c3e5993-cf30-47b9-9bf6-302ed3a70f87&#x22;&#x3E;
+        &#x3C;g id=&#x22;849902c3-24a3-46e6-9bf3-8dab0a71cce8&#x22; data-name=&#x22;Layer 1&#x22;&#x3E;&#x3C;polygon fill=&#x22;#fff&#x22; points=&#x22;0 4.64 0.71 5.34 3.85 2.2 3.85 15.98 4.85 15.98 4.85 2.2 8 5.34 8.71 4.64 4.35 0.29 0 4.64&#x22;&#x3E;&#x3C;/polygon&#x3E;&#x3C;polygon fill=&#x22;#fff&#x22; points=&#x22;11.65 0 11.65 13.79 8.5 10.64 7.79 11.35 12.15 15.7 16.5 11.35 15.79 10.64 12.65 13.79 12.65 0 11.65 0&#x22;&#x3E;&#x3C;/polygon&#x3E;&#x3C;/g&#x3E;&#x3C;/g&#x3E;&#x3C;/svg&#x3E;Scroll
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/main&#x3E;</code></pre>
+                                </div>
+                            </div>
+                            <div id="menu" class="section-block">
+                                <div class="code-block">
+                                    <h6>Menu</h6>
+<pre class=" language-markup"><code class="language-markup">&#x3C;nav class=&#x22;ms-nav&#x22;&#x3E;
+  &#x3C;div class=&#x22;ms-logo&#x22;&#x3E;
+    &#x3C;a href=&#x22;index.html&#x22; data-type=&#x22;page-transition&#x22;&#x3E;
+      &#x3C;div class=&#x22;logo-dark current&#x22;&#x3E;&#x3C;img src=&#x22;logo-dark.svg&#x22; alt=&#x22;logo image&#x22;&#x3E;&#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;logo-light&#x22;&#x3E;&#x3C;img src=&#x22;logo-light.svg&#x22; alt=&#x22;logo image&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/a&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;button class=&#x22;hamburger&#x22; type=&#x22;button&#x22; data-toggle=&#x22;navigation&#x22;&#x3E;
+  &#x3C;span class=&#x22;hamburger-box&#x22;&#x3E;
+    &#x3C;span class=&#x22;hamburger-label&#x22;&#x3E;menu&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;hamburger-inner&#x22;&#x3E;&#x3C;/span&#x3E;
+  &#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;height-full-viewport&#x22;&#x3E;
+    &#x3C;ul class=&#x22;ms-navbar&#x22;&#x3E;
+      &#x3C;!-- Nav Link --&#x3E;
+      &#x3C;li class=&#x22;nav-item&#x22;&#x3E;
+        &#x3C;a href=&#x22;index.html&#x22; data-type=&#x22;page-transition&#x22;&#x3E;
+          &#x3C;span class=&#x22;ms-btn&#x22;&#x3E;home&#x3C;/span&#x3E;
+          &#x3C;span class=&#x22;nav-item__label&#x22;&#x3E;Back to home page&#x3C;/span&#x3E;
+        &#x3C;/a&#x3E;
+      &#x3C;/li&#x3E;
+      ...
+    &#x3C;/ul&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="albums" class="section-block">
+                                <div class="code-block">
+                                    <h6>Albums</h6>
+                                    <pre class=" language-markup"><code class="language-markup">  &#x3C;!-- Sort --&#x3E;
+  &#x3C;ul class=&#x22;filtr-btn&#x22;&#x3E;
+      &#x3C;li data-filter=&#x22;all&#x22; class=&#x22;active&#x22;&#x3E;&#x3C;h6&#x3E;all&#x3C;/h6&#x3E;&#x3C;/li&#x3E;
+      &#x3C;li data-filter=&#x22;1&#x22;&#x3E;&#x3C;h6&#x3E;fashion&#x3C;/h6&#x3E;&#x3C;/li&#x3E;
+      ...
+  &#x3C;/ul&#x3E;
+  &#x3C;div class=&#x22;filtr-container row&#x22;&#x3E;
+    &#x3C;!-- Album item --&#x3E;
+    &#x3C;div class=&#x22;album-item col-md-4 filtr-item&#x22; data-category=&#x22;1&#x22;&#x3E;
+        &#x3C;a href=&#x22;gallery.html&#x22; data-type=&#x22;page-transition&#x22;&#x3E;
+            &#x3C;div class=&#x22;album-item__overlay&#x22;&#x3E;
+                &#x3C;span class=&#x22;album-item__cover&#x22;&#x3E;&#x3C;/span&#x3E;
+                &#x3C;h5&#x3E;album title&#x3C;/h5&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;album-item__img&#x22; style=&#x22;background-image: url(IMAGE.jpg)&#x22;&#x3E;&#x3C;/div&#x3E;
+        &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+    ...
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="gallery" class="section-block">
+                                <div class="code-block">
+                                    <h6>Gallery</h6>
+                                    <p>Learn more: <a href="http://unitegallery.net/" target="_blank"> link</a></p>
+                                    <pre class=" language-markup"><code class="language-markup"> &#x3C;div id=&#x22;gallery&#x22;&#x3E;
+  &#x3C;img alt=&#x22;image 1&#x22; src=&#x22;IMAGE.jpg&#x22; data-image=&#x22;IMAGE.jpg&#x22; data-description=&#x22;TITLE&#x22;&#x3E;
+  ...
+&#x3C;/div&#x3E;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="blog" class="section-block">
+                                <div class="code-block">
+                                    <h6>Blog</h6>
+                                    <pre class=" language-markup"><code class="language-markup">&#x3C;!-- Footer --&#x3E;
+    &#x3C;footer class=&#x22;ms-footer&#x22;&#x3E;
+        &#x3C;div class=&#x22;copyright&#x22;&#x3E;2017 &#xA9; MadSparrow&#x3C;/div&#x3E;
+        &#x3C;ul class=&#x22;footer-socials&#x22;&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;Link&#x22; class=&#x22;ms-btn&#x22; target=&#x22;_blank&#x22;&#x3E;Social&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            ...
+        &#x3C;/ul&#x3E;
+    &#x3C;/footer&#x3E;
+&#x3C;!-- /Footer --&#x3E;</code></pre>
+                                </div>
+                            </div>
+
+                         <!-- /HTML Structure -->
+
+                        <!-- CSS Structure -->
+                            <section id="css" class="doc-section">
+                                <h2 class="section-title">CSS Structure</h2>
+                                <pre class="language-css"><code class=" language-css">/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Template Name: Emily - Creative Photography Portfolio
+Template Demo URL: 
+Version: 1.0
+Author: madsparrow.us
+
+--------------------------------------------------------------------
+
+[Table of contents]
+
+1. General style
+    1.1 Typography
+    1.2 Specials Classes
+2. Header
+    2.1 Menu
+    2.2 Burger Button
+    2.3 Collapse Navigation
+3. Pages Style
+4. Home Slider
+    4.1 Slider Navigation Buttons
+    4.2 Slider Inner Info
+  4.3 Pagination
+5. Albums
+6. Gallery
+7. Blog
+8. About
+9. Contact
+10. Footer
+11. Responsive Rules
+
+--------------------------------------------------------------------
+# Font: 'Yantramanav';
+--------------------------------------------------------------------
+# Colors: #151515, #df1f29, #555555
+------------------------------------------------------------------*/</code></pre>
+                            </section>
+                        <!-- /CSS Structure -->
+
+                        <!-- JS Structure -->
+                            <section id="js" class="doc-section">
+                                <h2 class="section-title">JS Structure</h2>
+                                <pre class=" language-javascript"><code class=" language-javascript">(function(window) {
+
+    'use strict';
+
+    $.exists = function(selector) {
+        return ($(selector).length > 0);
+    }
+
+    // All Funtions
+    PageTransition();
+    Menu();
+    HomeSlider();
+    Sort();
+    UniteGallery();
+    ValidForm();
+
+})(window);</code></pre>
+                            </section>
+                        <!-- /JS Structure -->
+
+                        <!-- /Icons -->
+                        <section id="icons-section" class="doc-section">
+                            <h2 class="section-title">Icons</h2>
+                            <div class="section-block">
+                                <a href="http://www.socicon.com/" target="_blank"><i class="fa fa-external-link-square"></i> Socicon</a>
+                            </div><!--//section-block-->                                
+                        </section>
+                        <!-- /Icons -->
+
+                        <!-- Credits -->
+                            <section id="source" class="doc-section">
+                                <h2 class="section-title">Source & Credits</h2>
+                                <div class="section-block">
+                                    <ul class="list list-unstyled">
+                                        <li><a href="animejs.com/" target="_blank"><i class="fa fa-external-link-square"></i> Anime.js</a></li>
+                                        <li><a href="http://idangero.us/swiper/#.WWyarUVJaUk" target="_blank"><i class="fa fa-external-link-square"></i> Swiper</a></li>
+                                        <li><a href="http://yiotis.net/filterizr/" target="_blank"><i class="fa fa-external-link-square"></i> Filterizr</a></li>
+                                        <li><a href="http://unitegallery.net/" target="_blank"><i class="fa fa-external-link-square"></i> Unitegallery</a></li>
+                                        <li><a href="http://jqueryvalidation.org/" target="_blank"><i class="fa fa-external-link-square"></i> Validate</a></li>
+                                    </ul>
+                                </div><!--//section-block-->
+                            </section>
+                        <!-- /Credits -->
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+
+
+
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                                <li><a class="scrollto" href="#download-section">Download</a></li>
+                                <li><a class="scrollto" href="#included">What's included</a></li>
+                                <li>
+                                    <a class="scrollto" href="#html">HTML Structure</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#home">Home</a></li>
+                                        <li><a class="scrollto" href="#menu">Menu</a></li>
+                                        <li><a class="scrollto" href="#albums">Albums</a></li>
+                                        <li><a class="scrollto" href="#gallery">Gallery</a></li>
+                                        <li><a class="scrollto" href="#blog">Blog</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#css">CSS Structure</a>
+                                </li>
+                                <li><a class="scrollto" href="#js">JS Structure</a></li>
+                                <li><a class="scrollto" href="#source">Source & Credits</a></li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://themeforest.net/user/madsparrow" target="_blank">Mad Sparrow</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
